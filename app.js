@@ -38,11 +38,12 @@ function generatePhotos(data) {
     data.photos.forEach(photo => {
         const galleryImg = document.createElement('div');
         galleryImg.classList.add('gallery-img');
+        const photographer = (photo.photographer.length > 25) ? photo.photographer.substring(0, 25) + '...' : photo.photographer;
         galleryImg.innerHTML = 
             `
             <div class="photo-info">
                 <div class="photo-info-left">
-                    <p class="photographer">${photo.photographer}</p>
+                    <p class="photographer">${photographer}</p>
                     <p class="size-text">Tamaño original: ${photo.width} x ${photo.height}</p>
                 </div>
                 <div class="download-options">
@@ -51,9 +52,9 @@ function generatePhotos(data) {
                         <span>Original</span>
                     </a>
                     <div class="size-options">
-                        <a href="${photo.src.large}" title="940x650" target="_blank">Grande</a>
+                        <a href="${photo.src.large}" title="940x650" target="_blank">Lg</a>
                         <a href="${photo.src.medium}" title="350px altura" target="_blank">Med</a>
-                        <a href="${photo.src.small}" title="130px altura" target="_blank">Pequeña</a>
+                        <a href="${photo.src.small}" title="130px altura" target="_blank">Sm</a>
                     </div>
                 </div>
             </div>

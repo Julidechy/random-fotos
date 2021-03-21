@@ -129,12 +129,13 @@ header {
   padding-bottom: 0.5rem;
 }
 .gallery .gallery-img .photo-info .photo-info-left {
+  width: 70%;
   font-family: "Roboto", sans-serif;
   text-align: left;
   color: #fffffe;
 }
 .gallery .gallery-img .photo-info .photo-info-left .photographer {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   padding-bottom: 0.5rem;
 }
 .gallery .gallery-img .photo-info .photo-info-left .size-text {
@@ -143,7 +144,7 @@ header {
 }
 .gallery .gallery-img .photo-info .download-options {
   font-family: "Roboto", sans-serif;
-  width: 50%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -156,11 +157,11 @@ header {
   margin-bottom: 0.5rem;
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: center;
 }
 .gallery .gallery-img .photo-info .download-options .download-btn .icon {
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
   fill: currentColor;
   color: #b8c1ec;
 }
