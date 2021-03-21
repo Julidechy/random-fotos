@@ -230,10 +230,12 @@ footer{
     margin-top: 5rem;
     position: relative;
     & .footer-text{
+        max-width: 80%;
         font-family: 'Roboto', sans-serif;
         color:$btn-bg;
         font-size: 1.25rem;
         text-align: center;
+        margin: 0 auto;
     }
     & .back-to-top {
         align-self: end;
