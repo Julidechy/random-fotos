@@ -1,0 +1,274 @@
+/*  VARIABLES  */  
+/*Paleta de colores de Happy hues: https://www.happyhues.co/palettes/12*/
+
+$bg-color: #232946;
+$main-text: #fffffe;
+$p-text: #b8c1ec;
+$btn-bg: #eebbc3;
+$btn-text: #232946;
+$stroke: #121629;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 65%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Syne Mono', monospace;
+    background-color: $bg-color;
+    color:$main-text;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 2rem;
+}
+
+.logo {
+    padding: 3rem 0;
+    font-size: 4rem;
+    text-align: center;
+    & .logo-link{
+        color: $main-text;
+        text-decoration: none;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 0;
+            background-color: $main-text;
+            transform-origin: center;
+            bottom: 0;
+            left: 0;
+            transition: all 0.3s ease-in-out;
+        }
+        &:hover::before{
+            width: 100%;
+            height: 3px;
+        }
+    }
+}
+
+.search-form {
+    padding: 1rem;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & .search-input{
+        background-color: $stroke;
+        color: $p-text;
+        border: none;
+        border-radius: 10px;
+        text-align: cener;
+        width: 100%;
+        padding: 1rem 2rem;
+    }
+    & .search-btn {
+        background-color: $btn-bg;
+        color:$btn-text;
+        border: none;
+        border-radius: none;
+        padding: 1rem 4rem;
+        margin-top: 2rem;
+        cursor: pointer;
+        font-size: 1.5rem;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            background-color:$stroke;
+            color: $btn-bg;
+        }
+    }
+}
+.loader {
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    & .more-btn {
+        background-color: $btn-bg;
+        color:$btn-text;
+        border: none;
+        border-radius: none;
+        padding: 1rem 4rem;
+        margin-top: 2rem;
+        cursor: pointer;
+        font-size: 1.5rem;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            background-color:$stroke;
+            color: $btn-bg;
+        }
+    }
+}
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2rem auto;
+    overflow: hidden;
+    & .gallery-img {
+        margin: 1rem auto 2rem auto;
+        & .photo-info {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: baseline;
+            padding-bottom: 0.5rem;
+            & .photo-info-left {
+                font-family: 'Roboto', sans-serif;
+                text-align: left;
+                color: $main-text;
+                & .photographer{
+                    font-size: 1.8rem;
+                    padding-bottom: 0.5rem;
+                }
+                & .size-text {
+                    font-size: 1rem;
+                    padding-bottom: 0.5rem;
+                }
+            }
+            & .download-options{
+                font-family: 'Roboto', sans-serif;
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                & .download-btn{
+                    font-size: 1.5rem;
+                    color: $p-text;
+                    position: relative;
+                    text-decoration: none;
+                    margin-bottom: 0.5rem;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: baseline;
+                    & .icon{
+                        width: 2rem;
+                        height: 2rem;
+                        fill: currentColor;
+                        color:$p-text;
+                    }
+                    & span{
+                        position: relative;
+                    }
+                    & span::before{
+                        content: "";
+                        position: absolute;
+                        height: 1.5px;
+                        width: 0;
+                        background-color: $p-text;
+                        transform-origin: center;
+                        bottom: 0;
+                        left: 0;
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &:hover span::before{
+                        width: 100%;
+                        height: 3px;
+                    }
+                }
+                & .size-options {
+                    width: 80%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    font-size: 1rem;
+                    & a{
+                        color:$main-text;
+                        text-decoration: none;
+                        position: relative;
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            height: 0.5px;
+                            width: 0;
+                            background-color: $main-text;
+                            transform-origin: center;
+                            bottom: -5px;
+                            left: 0;
+                            transition: all 0.3s ease-in-out;
+                        }
+                        &:hover::before{
+                            width: 100%;
+                            height: 1px;
+                        }
+                    }
+                }
+            }
+        }
+        & img{
+            width: 300px;
+            height: 400px;
+            object-fit: cover; 
+        }
+
+    } 
+}
+
+footer{
+    border-top: 1px solid $p-text;
+    padding: 2rem;
+    margin-top: 5rem;
+    position: relative;
+    & .footer-text{
+        font-family: 'Roboto', sans-serif;
+        color:$btn-bg;
+        font-size: 1.25rem;
+        text-align: center;
+    }
+    & .back-to-top {
+        align-self: end;
+        & .caret {
+            width: 3rem;
+            height: 3rem;
+            position: absolute;
+            right: 2rem;
+            top:50%;
+            transform: translateY(-50%);
+            fill: currentColor;
+            color:$btn-bg;
+        }
+    }
+}
+
+
+
+@media (min-width: 640px){
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .logo {
+        font-size: 6rem;
+    }
+}
+
+@media (min-width: 1024px){
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1536px){
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 90vw;
+    }
+}
